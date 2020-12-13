@@ -1,0 +1,257 @@
+### Hizalama
+- position
+	- relative
+	- absolute
+	- static
+	- sticky
+	- fixed
+- z-index
+	- -1
+	- +1
+- display
+	- flex;
+	- block;
+	- inline
+	- inline-block
+	- inherit
+	- list-item
+	- grid
+	- none	//element gizleemk için kullanılır //display:block olursa animasyon çalışmaz  animasyon çalışması istenirse   visibility: hidden; kullanılabilir*/
+- align-items
+	- center;
+- float
+	- left
+	- right
+	- none	
+- clear	
+	- both
+- lineHeight
+	- 32px
+- margin  //margin de kutu boyutu sabit kalıp, kutunun dış boyutundaki boşluk değişirken, paddingde kutu iç boyutu değişir 
+	- 50px 0;
+	- 0 auto;
+- padding //paddingde kutu iç boyutu değişir. Margin de kutu boyutu sabit kalıp, kutunun dış boyutundaki boşluk değişir.
+	- 0 10px;
+	- 5px;
+- overflow
+	- hidden 		 		//kutuda taşma olduğunda kutudan taşan kısmı gizleler
+	- scroll
+	- visible
+	- auto
+### kutu içi decerasyon özellikleri   
+- box-sizing
+	- border-box
+- border
+	- 1px solid blue;
+- border-bottom
+	- 1px #444 solid;   
+- border-radius
+  - 50em;
+	- 50%;
+- border-color: 
+	- red;
+- border-width: 
+	- 5px;
+- border-style: 
+	- solid;
+- vertical-align //kutu içi itemleri vertical hizalama yapmak için kullanılır
+	- middle 
+- width
+	- 180px
+	- 50%;
+	- auto
+- height
+	- 140px
+	- 50%;
+	- auto
+	- 100vh
+	- calc(100vh - 80px);
+- outline
+	- none
+- border-sizing
+	- border-box
+- font-size
+	- 20px
+- font-weight
+	- 400
+- color									//font için renk ayarlaması yapılır
+	- rgba(255, 255, 255, 0.9);		
+- text-decoration: 
+	- none;				//a hrefin link özelliğini vs siler
+	- underline;
+- text-align
+	- center
+- text-transform: 
+	- uppercase;	/* kutu içindeki text büyük hare dönüştürüldü*/
+- list-style
+	- none 				//ul içindeki li'lerin maddde madde gibi şaretlerini siler
+- list-style-type
+	- none 				//ul içindeki li'lerin maddde madde gibi şaretlerini siler
+- background
+	- red
+	- transparent
+	- url(http://wallpo.jpg);
+	- url(bg1.jpg) no-repeat;
+- background-size
+	- cover
+- opacity: 
+	- 0
+	- 1.0
+- visibility
+	- visible
+	- hidden /*display:block'dan farkı::  display:block olursa animasyon çalışmaz */
+- cursor
+	- pointer //mouse, box üzerine geldiğinde,  tıklama işareti çıkar
+- box-shadow
+	- 2px 2px 6px 0px rgba(0,0,0,0.3);
+- font-family			//yeni font ayarlama
+	- 'Open Sans', sans-serif;   ////font-family: font, defaultFont; //font bulunmazsa defaultfont kullanılır onun yerine
+### ölçü birimleri
+  - 300px;
+  - 50%;
+  - 3rem
+  
+ ### CSS FLEX
+ - flext-direction  //child itemler horizantal yada vertical olarak mı konumlansın
+	- row
+	- column
+- flex-wrap  
+	- wrap             /*sayfaya sığmayanlar  otomatik alt satıra geçer ve scroll olması önlenir*/
+	- nowrap
+	- wrapreverse
+- flex-basis		//width ile aynı şeydir hücre genişliği ayarlar
+	- <length>
+- justify-content    //kutu içindeki itemleri horizantol olarak hizalama yapmak için
+	- flex-start
+	- flex-end
+	- center
+	- space-between
+	- space-around
+	- space-evenly
+- align-self
+	- flex-start
+	- flex-end
+	- center
+- align-items: 			//kutu içindeki itemleri vertical olarak hizalama yapmak için		
+	- flex-start			/* box içindeki başlangıçtan context kadar yer kablar*/
+	- flex-end
+	- center
+	- stretch
+- align-content
+	- flex-start
+	- flex-end
+	- center
+- flex-grow
+	- number
+- flex-shrink
+	- number
+- flex					/*hücrenin genişliğini ifade eder*/
+	- integer
+	- 1  //2 tane küçük hücre var diyeylim 1 alan otomatik boş alanlarda yer kaplar
+- order					/*kaçıncı hüce hangi sırada  konumlasın onu belirtir*/
+	- integer
+  
+ 
+ 
+ ### CSS GRİDS 
+ - grid-templete-columns
+	- 200px 250px //iki tane colomn olduğunu belrttik. ilki sol ikincisi sağ colomnu genişliğini belirtir
+	- 2fr	  1fr
+	- 150px 150px 150px; //3 tane colomn olduğunu belrttik. 3 colomnda 150px olacağını belirttik
+	- repeat(3, 150px); //bir yukardaki ile aynı şeye denk gelir. //yani 3 tane colomn olduğunu belrttik. 3 colomnda 150px olacağını belirttik
+	- grid-template-columns: 1fr 2fr 3fr; //3 tane colomn olduğunu belrttik. toplam genişlik 900 piksel diye düşünelim ilk kolon 900*(1/6) olur genişliği yani 150px, ikinci kolon 900*(2/6) olur genişliği yani 300px,  üçüncü kolon 900*(3/6) olur genişliği yani 450px
+	- grid-template-columns: 1fr 2fr 50%;//bir yukardaki ile tamamen aynı şey 
+	- grid-template-columns: 16.6% 2fr 50%;//bir yukardaki ile tamamen aynı şey 
+- grid-template-rows: 
+	 - 150px, 150px; //2 tane row olduğunu belrttik. 2 colomnda 150px olacağını belirttik
+	 - repeat(2, 150px); //bir yukardaki ile aynı şey // yani 2 tane row olduğunu belrttik. 2 colomnda 150px olacağını belirttik
+- grid-auto-rows 
+	- minmax(150px, auto) //colomn uzunluğu ifade eder ilki min ikincisi max olabileceği uzunluğu
+- grid-row-gap	//rowlar arası nekadar boşluk olsun
+	- 20px
+- grid-column-gap
+	- 10px		//columnlar arası nekadar boşluk olsun
+- grid-gap   //column ve rowlar arası nekadar mesafe bırakılsın	//diğer deyişle grid cell’ler arasına boşluk verir. // aynı anda hem column hem row’a boşluk verebilirsiniz
+	- 20px
+##### css grid ile itemleri konumlandırma işlemi
+- grid-column-start			//ex 2.2
+	- 3;
+- grid-column-end				//ex 2.2
+	- 4;
+- grid-row-start: 			//ex 2.2
+	- 2;
+- grid-row-end: 				//ex 2.2
+	- 3;
+- grid-area: 
+	- 2/ 3 / 3 / 4; //ex 2.2    //yukardaki ile aynu kısa yol //grid-area: row-start / column-start / row-end / column-end
+- grid-column
+	- 3/4; /*başlangıc 3.coldan bitiş 4.col'a kadar  1 colonluk yer kaplar */
+	- 1/4; /*başlangıc 1.coldan bitiş 4.col'a kadar  3 colonluk yer kaplar */
+	- 1/ -1;  /*başlangıc 1. coldan bitiş col sonsuza, kadar(width kadar) yer kapla anlamına gelir*/
+	- span 3;  /*olduğu yerden başla ve  3 kolonluk yer kapla demek*/
+- grid-row: 
+	- 3/4; /*başlangıc 3.rowdan  bitiş 4.rowa'a kadar  1 rowluk yer kaplar */
+  - 2/4; /*başlangıc 2.rowdan  bitiş 4.rowa'a kadar  2 rowluk yer kaplar */
+  - span 2; /*olduğu yerden başla ve  2 rowluk yer kapla demek*/
+- grid-area
+	- header
+	- aside
+	- main
+	- item-1
+	- item-2
+- grid-template-areas
+	- "header header header aside item-1 item-2"; //grid-template ile aynı şeyi yapar kestirme yoldur
+//css grid ile hizalama
+- align-items: //Grid itemların (row) yatay eksende hizalama yapmasını sağlar.
+	- start 
+	- end 
+	- center 
+	- stretch(default değer)
+- justify-items: //Grid itemların (col) dikey eksende hizalama yapmasını sağlar.
+	- start 
+	- end 
+	- center 
+	- stretch(default değer)
+- place-items: //Her iki eksendeki hizalamaları tek bir seferde yapmasını sağlar.
+	- align-items 
+	- justify-items
+- align-content
+- justify-content
+
+
+### DİĞER
+- @media(min-width: 768px){  /*browser sayfasının genişliği min 768 olduğunda bu kısımdaki kodlar aktif olur*/  .container1{width: %70;}  .container2{width: %50;}  }
+- @media all and (min-width: 468px){ ... } /*browser sayfasının genişliği min 468 olduğunda bu kısımdaki kodlar aktif olur*/
+- { .... } /* * şunu ifade eder her element için burdaki kurallar geçerli olur*/
+- .element::before, .element::after{ .... }
+- .element::after{ .... }
+- .element::before{ .... }
+- .element:not(.elementHaricTututlan) a:hover { ... } ///* belirtilen element hariç tutulur :not(elementHaricTututlan) sayesinde */
+- .element:checked{...}	//* input elementler ile kullanılır check oldupunda bu çalışır
+- @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); //css'e font ekleme import etme 
+
+
+
+### CSS ANiMASYONLAR
+- transition  
+	- all .25s;  c
+	- all 0.4s ease 0s;
+	- 0.3s ease-in-out;
+	- transform .4s ease-out;
+	- transform .6s linear;
+	- transform 300ms ease-in-out, opacity 300ms ease-in-out;
+- transform
+	- rotate(0deg);
+	- rotate(45deg);
+	- rotate(-45deg); 
+	- translateY(15px);	
+	- perspective(600px) rotateY(180deg);
+- transform-origin
+	- center center;
+	- top center;
+- transition-property: 
+	- background, width;
+- transition-duration: 
+	- 0.6s;
+- transition-delay: 
+	- 0.3s;
